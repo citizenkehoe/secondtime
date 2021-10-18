@@ -1,0 +1,8 @@
+- name: Massage
+  url: massage.html
+
+- name: About
+  url: about.html
+
+- name: Contact
+  url: contact.html
