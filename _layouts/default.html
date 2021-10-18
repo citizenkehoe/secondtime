@@ -9,23 +9,23 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/secondtime.css">
+	<link rel="stylesheet" href="/css/secondtime.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
 	<header>
-		<a href="{{ site.baseurl }}/">
-			<img src="{{ site.baseurl }}/images/logo-white.png" class="hide-mobile">
-			<img src="{{ site.baseurl }}/images/logo-black.png" class="hide-desktop">
+		<a href="/">
+			<img src="/images/logo-white.png" class="hide-mobile">
+			<img src="/images/logo-black.png" class="hide-desktop">
 		</a>
 		<label for="nav-toggle">Menu</label>
 		<input id="nav-toggle" class="nav-toggle-chbx" type="checkbox">
 		<nav>
 			<ul class="nav-list">
 				{% for entry in site.data.navigation %}
-					<li><a href="{{ site.baseurl }}/{{ entry.url }}">{{ entry.name }}</a></li>
+					<li><a href="/{{ entry.url }}">{{ entry.name }}</a></li>
 				{% endfor %}
 				<li><label for="nav-toggle">Close Menu</label></li>
 			</ul>
@@ -33,7 +33,7 @@
 	</header>
 
 	<main>
-		<img class="header-img" src="{{ site.baseurl }}/images/{{ page.picture-file }}">
+		<img class="header-img" src="/images/{{ page.picture-file }}">
 		<h2>{{ page.title }}</h2>
 		{{ content }}
 	</main>
@@ -41,9 +41,9 @@
 	<footer>
 		<div>
 			<ul class="nav-list">
-				<li><a href="{{ site.baseurl }}/">Home</a></li>
+				<li><a href="/">Home</a></li>
 				{% for entry in site.data.navigation %}
-					<li><a href="{{ site.baseurl }}/{{ entry.url }}">{{ entry.name }}</a></li>
+					<li><a href="/{{ entry.url }}">{{ entry.name }}</a></li>
 				{% endfor %}
 			</ul>
 		</div>
