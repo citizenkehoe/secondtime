@@ -9,7 +9,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{{ site.url }}/{{ site.baseurl }}/css/secondtime.css">
+	<link rel="stylesheet" href="{{ '/css/secondtime.css' | absolute_url }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -25,7 +25,7 @@
 		<nav>
 			<ul class="nav-list">
 				{% for entry in site.data.navigation %}
-					<li><a href="{{ site.url }}/{{ site.baseurl }}/{{ entry.url }}">{{ entry.name }}</a></li>
+					<li><a href="{{ entry.url | prepend: '/' | absolute_url }}">{{ entry.name }}</a></li>
 				{% endfor %}
 				<li><label for="nav-toggle">Close Menu</label></li>
 			</ul>
@@ -33,7 +33,7 @@
 	</header>
 
 	<main>
-		<img class="header-img" src="{{ site.url }}/{{ site.baseurl }}/images/{{ page.picture-file }}">
+		<img class="header-img" src="{{ page.picture-file | prepend: '/images/' | absolute_url }}">
 		<h2>{{ page.title }}</h2>
 		{{ content }}
 	</main>
@@ -41,9 +41,9 @@
 	<footer>
 		<div>
 			<ul class="nav-list">
-				<li><a href="{{ site.url }}/{{ site.baseurl }}">Home</a></li>
+				<li><a href="{{ '/' | absolute_url }}">Home</a></li>
 				{% for entry in site.data.navigation %}
-					<li><a href="{{ site.url }}/{{ site.baseurl }}/{{ entry.url }}">{{ entry.name }}</a></li>
+					<li><a href="{{ entry.url | prepend: '/' | absolute_url }}">{{ entry.name }}</a></li>
 				{% endfor %}
 			</ul>
 		</div>
