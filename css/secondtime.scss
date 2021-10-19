@@ -141,10 +141,10 @@ main {
 	grid-area: main;
 	margin-top: 6rem;
 
-	& h2 {
-		color: #8F7A00;
-		font-size: 3rem;
-		font-weight: 900;
+	& h2,
+	& h3,
+	& h4 {
+		margin-top: 1.3em;
 	}
 
 	& p,
@@ -152,6 +152,12 @@ main {
 	& ol {
 		line-height: 1.8;
 		margin-bottom: 1.2em;
+	}
+
+	& h2 {
+		color: #8F7A00;
+		font-size: 3rem;
+		font-weight: 900;
 	}
 }
 
