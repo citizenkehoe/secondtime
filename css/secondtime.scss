@@ -9,7 +9,7 @@
 	max-width: 700px;
 	padding: 1em;
 	@media (min-width: 900px) {
-		margin-left: 4em;
+		margin-left: clamp(10px, 4vw, 60px);
 		padding: 2em;
 	}
 }
@@ -139,7 +139,7 @@ main {
 	background-color: white;
 	border-right: 8px solid hsl(219, 20, 90);
 	grid-area: main;
-	margin-top: 6rem;
+	margin-top: 30px;
 
 	& h2,
 	& h3,
@@ -164,7 +164,14 @@ main {
 		color: #8F7A00;
 		font-size: 1.5rem;
 		margin: 3em 0;
+		padding: 0 10%;
 		text-align: center;
+	}
+
+	& cite {
+		display: block;
+		font-size: .85rem;
+		text-align: right;
 	}
 }
 
@@ -175,14 +182,17 @@ footer {
 	font-size: .8rem;
 	grid-area: footer;
 	justify-content: space-between;
+	margin-bottom: 3rem;
 	width: 100%;
 }
 
 
 .header-img {
 	box-shadow: .05em .05em .25em black;
-	width: 100%;
-	margin-bottom: 3em;
+	height: 325px;
+	margin-bottom: 2.5em;
+	object-fit: cover;
+	width: clamp(100%, 70vw, 125%);
 }
 
 .hide-mobile {
@@ -210,4 +220,8 @@ footer {
 .nav-toggle-chbx:checked ~ nav {
 	visibility: visible;
 	opacity: 1;
+}
+
+.page-title {
+	margin-top: 0;
 }
